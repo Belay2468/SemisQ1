@@ -161,9 +161,9 @@
     height: 3rem;
   }
   .cards .cards__wrapper{
-    position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
   }
   .btn{
     padding: 2rem;
@@ -179,12 +179,51 @@
   .cards .cards__actual:hover{
     scale: 1.15;
   }
-  @media screen and(max-width:500px){
-    .cards .cards__wrapper{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
+ 
+ 
+@media screen and (max-width:600px) {
+.cards .cards__wrapper{
+display: flex;
+flex-direction: column;
 }
-  body{
+body {
     height:1500px
-  }
+}
+.cards__title {
+  padding-bottom: 5rem;
+}
+.cards .cards__actual{
+  width: 30rem;
+  padding: 3rem;
+  border: 1px solid var(--transparent);
+  border-radius: 0.8rem;
+  gap: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+}
+.cards .cards__actual:hover{
+  scale: 1.15;
+}
+.cards .cards__actual .cards__top p{
+  display: flex;
+  justify-items: center;
+}
+.cards .cards__title h2{
+  color: var(--primary);
+  font-size: 3rem;
+  font-weight: 800;
+}
+.cards .cards__actual .cards__top h2{
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.cards .cards__actual .cards__top p{
+  display: flex;
+  justify-items: center;
+}
+
+ 
